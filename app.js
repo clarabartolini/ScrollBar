@@ -74,3 +74,27 @@
         linksContainer.style.height = 0;
         });   
     })
+
+
+    // login
+
+// usando a classe scroll-link
+const loginLink = document.querySelector('.scroll-link[href="#login"]');
+const loginModal = document.getElementById('login-modal');
+
+loginLink.addEventListener('click', (e) => {
+  e.preventDefault(); // evita o scroll padrão
+  loginModal.style.display = 'flex'; // mostra o modal
+});
+const closeBtn = document.querySelector('.close-btn');
+
+closeBtn.addEventListener('click', () => {
+  loginModal.style.display = 'none';
+});
+
+// fechar se clicar fora
+window.addEventListener('click', (e) => {
+  if (e.target === loginModal) {
+    loginModal.style.display = 'none';
+  }
+});
