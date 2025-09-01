@@ -74,3 +74,35 @@
         linksContainer.style.height = 0;
         });   
     })
+
+
+    // login
+
+const loginLink = document.querySelector('.scroll-link[href="#login"]');
+const loginModal = document.getElementById('login-modal');
+const closeBtn = document.querySelector('.close-btn');
+const loginForm = document.getElementById('login-form');
+const welcomeMessage = document.getElementById('welcome-message');
+
+loginLink.addEventListener('click', (e) => {
+  e.preventDefault();
+  loginModal.style.display = 'flex';
+});
+
+closeBtn.addEventListener('click', () => {
+  loginModal.style.display = 'none';
+});
+
+window.addEventListener('click', (e) => {
+  if (e.target === loginModal) {
+    loginModal.style.display = 'none';
+  }
+});
+
+loginForm.addEventListener('submit', function(event) {
+  event.preventDefault();
+  const username = document.getElementById('username').value;
+
+  welcomeMessage.textContent = `Bem-vindo, ${username}!`;
+  loginModal.style.display = 'none';
+});
