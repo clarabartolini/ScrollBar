@@ -65,7 +65,9 @@ Acesse a pasta pelo vs code:
 
 Acesse o arquivo index.html e clique no botão go live para abrir o site
 
-imagem
+
+https://github.com/user-attachments/assets/f06de106-7f80-42a9-883a-fb36378dea59
+
 
 <h2> Melhoria </h2>
 A nossa melhoria nesse trabalho foi criar um model de login
