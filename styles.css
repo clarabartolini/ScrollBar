@@ -386,35 +386,62 @@ footer p {
     transform: scale(1);
   }
 }
-/* fundo do modal */
 .modal {
-  display: none; /* escondido por padrão */
+  display: none; 
   position: fixed;
   z-index: 1000;
   left: 0;
   top: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0,0,0,0.6); /* fundo semi-transparente */
+  background-color: rgba(0,0,0,0.6); 
   justify-content: center;
   align-items: center;
 }
 
-/* conteúdo do modal */
 .modal-content {
   background-color: #fff;
   padding: 2rem;
-  border-radius: 8px;
+  border-radius: 12px;
   width: 90%;
   max-width: 400px;
   position: relative;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+  font-family: 'Arial', sans-serif;
 }
 
-/* botão fechar */
 .close-btn {
   position: absolute;
   top: 10px;
   right: 15px;
   font-size: 1.5rem;
   cursor: pointer;
+  background: none;
+  border: none;
+  color: #333;
+  transition: color 0.2s ease;
 }
+.close-btn:hover {
+  color: #ff5555;
+}
+
+input[type="text"], input[type="password"] {
+  width: 100%;
+  padding: 0.7rem;
+  margin: 0.5rem 0 1rem 0;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  box-sizing: border-box;
+  transition: border-color 0.3s;
+}
+input[type="text"]:focus, input[type="password"]:focus {
+  border-color: #007BFF;
+  outline: none;
+}
+
+  #welcome-message {
+    margin-top: 20px;
+    font-size:larger;
+    font-weight: bold;
+    text-align: center;
+  }

@@ -78,23 +78,31 @@
 
     // login
 
-// usando a classe scroll-link
 const loginLink = document.querySelector('.scroll-link[href="#login"]');
 const loginModal = document.getElementById('login-modal');
+const closeBtn = document.querySelector('.close-btn');
+const loginForm = document.getElementById('login-form');
+const welcomeMessage = document.getElementById('welcome-message');
 
 loginLink.addEventListener('click', (e) => {
-  e.preventDefault(); // evita o scroll padrão
-  loginModal.style.display = 'flex'; // mostra o modal
+  e.preventDefault();
+  loginModal.style.display = 'flex';
 });
-const closeBtn = document.querySelector('.close-btn');
 
 closeBtn.addEventListener('click', () => {
   loginModal.style.display = 'none';
 });
 
-// fechar se clicar fora
 window.addEventListener('click', (e) => {
   if (e.target === loginModal) {
     loginModal.style.display = 'none';
   }
+});
+
+loginForm.addEventListener('submit', function(event) {
+  event.preventDefault();
+  const username = document.getElementById('username').value;
+
+  welcomeMessage.textContent = `Bem-vindo, ${username}!`;
+  loginModal.style.display = 'none';
 });
