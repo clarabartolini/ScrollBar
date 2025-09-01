@@ -64,8 +64,9 @@ Acesse a pasta pelo vs code:
 ```
 
 Acesse o arquivo index.html e clique no botão go live para abrir o site
+
 imagem
 
-Melhoria
+<h2> Melhoria </h2>
 A nossa melhoria nesse trabalho foi criar um model de login
 O nosso site foi feito para ter um scroll bar construido com uma estrutura do HTML e pelas funções da linguagem java script. Mas percebemos que ele estava incompleto por não ter uma parte de login como os outros sites. Então decidimos criar um model login, pois não só completa o site, como também ele é construido com java script
